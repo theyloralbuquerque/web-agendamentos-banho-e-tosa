@@ -8,7 +8,7 @@ const requisicao = () =>
   new Promise((resolve, reject) => {
     setTimeout(() => {
       resolve();
-    }, 2000);
+    }, 600);
   });
 
 function* exampleRequest() {
@@ -20,5 +20,5 @@ function* exampleRequest() {
     yield put(actions.clicaBotaoFailure());
   }
 }
-//
+
 export default all([takeLatest(types.BOTAO_CLICADO_REQUEST, exampleRequest)]);
